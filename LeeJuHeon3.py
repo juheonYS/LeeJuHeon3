@@ -125,7 +125,7 @@ try:
     # 산점도 투명도 조절
     point_alpha = st.sidebar.slider(
         min_value=0.10,
-        max_value=1.00,
+        max_value=float(1.00),
         value = 0.50,
         step = 0.01
     )
@@ -153,4 +153,5 @@ except Exception as e:
     st.info("데이터 파일의 구조를 확인해주세요. 'data/sunspots.csv' 파일이 존재하고 'YEAR'와 'SUNACTIVITY' 컬럼이 있어야 합니다.")
 
     
+
 
