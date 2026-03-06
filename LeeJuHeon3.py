@@ -112,7 +112,7 @@ try:
         '추세선 차수',
         min_value=1,
         max_value=5,
-        value=1
+        value=3
     )
 
     # 산점도 점 크기 조절
@@ -142,7 +142,7 @@ try:
             filtered_df,
             hist_bins=hist_bins,
             trend_degree=trend_degree,
-            point_size=point_size,
+            #point_size=point_size,
             point_alpha=point_alpha
         )
         st.pyplot(fig)
@@ -154,6 +154,7 @@ except Exception as e:
     st.info("데이터 파일의 구조를 확인해주세요. 'data/sunspots.csv' 파일이 존재하고 'YEAR'와 'SUNACTIVITY' 컬럼이 있어야 합니다.")
 
     
+
 
 
 
