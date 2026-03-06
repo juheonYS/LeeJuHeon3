@@ -97,14 +97,14 @@ try:
     st.sidebar.title('시각화 파라미터 조절')
 
     # 연도 범위 선택
-    st.sidebar.slider('연도 범위 선택', min_value=min(df["YEAR_INT"]), max_value=max(df["YEAR_INT"]), value=[1764, 1928])
+    year_range = st.sidebar.slider('연도 범위 선택', min_value=min(df["YEAR_INT"]), max_value=max(df["YEAR_INT"]), value=[1764, 1928])
 
     # 히스토그램 빈(bin) 수 조절
     hist_bins = st.sidebar.slider(
         '히스토그램 구간 수',
         min_value=5,
         max_value=100,
-        value=30
+        value=38
     )
 
     # 추세선 차수 조절
@@ -154,6 +154,7 @@ except Exception as e:
     st.info("데이터 파일의 구조를 확인해주세요. 'data/sunspots.csv' 파일이 존재하고 'YEAR'와 'SUNACTIVITY' 컬럼이 있어야 합니다.")
 
     
+
 
 
 
